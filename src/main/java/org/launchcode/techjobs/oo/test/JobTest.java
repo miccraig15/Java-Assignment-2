@@ -61,7 +61,6 @@ public class JobTest {
                 "Location: Desert" + "\n" +
                 "Position Type: Quality control" + "\n" +
                 "Core Competency: Persistence" + "\n");
-        System.out.println(job_Three.toString());
     }
 
     @Test
