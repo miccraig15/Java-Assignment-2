@@ -63,11 +63,54 @@ public class JobTest {
                 "Location: Desert" + "\n" +
                 "Position Type: Quality control" + "\n" +
                 "Core Competency: Persistence" + "\n");
-        System.out.println(job_One.toString());
+//        System.out.println(job_One.toString());
     }
 
     @Test
     public void testToStringHandlesEmptyField() {
+        Job job_One = new Job((""), new Employer ("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals(job_One.toString(), "\n" +
+                "ID: 1" + "\n" +
+                "Name: Data not available" + "\n" +
+                "Employer: ACME" + "\n" +
+                "Location: Desert" + "\n" +
+                "Position Type: Quality control" + "\n" +
+                "Core Competency: Persistence" + "\n");
 
+        Job job_Two = new Job(("Product tester"), new Employer (""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals(job_Two.toString(), "\n" +
+                "ID: 2" + "\n" +
+                "Name: Product tester" + "\n" +
+                "Employer: Data not available" + "\n" +
+                "Location: Desert" + "\n" +
+                "Position Type: Quality control" + "\n" +
+                "Core Competency: Persistence" + "\n");
+
+        Job job_Three = new Job(("Product tester"), new Employer ("ACME"), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals(job_Three.toString(), "\n" +
+                "ID: 3" + "\n" +
+                "Name: Product tester" + "\n" +
+                "Employer: ACME" + "\n" +
+                "Location: Data not available" + "\n" +
+                "Position Type: Quality control" + "\n" +
+                "Core Competency: Persistence" + "\n");
+
+        Job job_Four = new Job(("Product tester"), new Employer ("ACME"), new Location("Desert"), new PositionType(""), new CoreCompetency("Persistence"));
+        assertEquals(job_Four.toString(), "\n" +
+                "ID: 4" + "\n" +
+                "Name: Product tester" + "\n" +
+                "Employer: ACME" + "\n" +
+                "Location: Desert" + "\n" +
+                "Position Type: Data not available" + "\n" +
+                "Core Competency: Persistence" + "\n");
+
+        Job job_Five = new Job(("Product tester"), new Employer ("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency(""));
+        assertEquals(job_Five.toString(), "\n" +
+                "ID: 5" + "\n" +
+                "Name: Product tester" + "\n" +
+                "Employer: ACME" + "\n" +
+                "Location: Desert" + "\n" +
+                "Position Type: Quality control" + "\n" +
+                "Core Competency: Data not available" + "\n");
     }
 }

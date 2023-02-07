@@ -67,15 +67,40 @@ public class Job {
 
     public int getId() { return id; }
 
-    public String getName() { return name; }
+    public String getName() {
+        if (name == "") {
+            return "Data not available";
+        } else {
+            return name;
+        }
+    }
+    public Employer getEmployer() {
+        if (employer.getValue() == "") {
+            employer.setValue("Data not available");
+            }
+        return employer;
+    }
 
-    public Employer getEmployer() { return employer; }
+    public Location getLocation() {
+        if (location.getValue() == "") {
+            location.setValue("Data not available");
+        }
+        return location;
+    }
 
-    public Location getLocation() { return location; }
+    public PositionType getPositionType() {
+        if (positionType.getValue() == "") {
+            positionType.setValue("Data not available");
+        }
+        return positionType;
+    }
 
-    public PositionType getPositionType() { return positionType; }
-
-    public CoreCompetency getCoreCompetency() { return coreCompetency; }
+    public CoreCompetency getCoreCompetency() {
+        if (coreCompetency.getValue() == "") {
+            coreCompetency.setValue("Data not available");
+        }
+        return coreCompetency;
+    }
 
     // Setters:
 
