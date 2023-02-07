@@ -42,9 +42,6 @@ public class CoreCompetency extends JobField {
 //        return Objects.hash(getId());
 //    }
 
-    // TODO: Use the "Generate" tool to add a getter and setter for the 'value' field but
-    //  ONLY a getter for the 'id' field.
-
     //Getters and Setters:
 
 //    public int getId() { return id; }
