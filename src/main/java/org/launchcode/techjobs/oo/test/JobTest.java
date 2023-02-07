@@ -19,8 +19,7 @@ import org.junit.runners.JUnit4;
 
 public class JobTest {
 
-    static Job job_One; static Job job_Two; static Job job_Three; static Job job_Four; static Job job_Five;
-    static Job job_Six; static Job job_Seven; static Job job_Eight; static Job job_Nine;
+    static Job job_One, job_Two, job_Three,job_Four, job_Five, job_Six, job_Seven, job_Eight, job_Nine;
     @BeforeClass
     public static void createJobObjects() {
         job_One = new Job();
